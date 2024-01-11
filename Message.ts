@@ -41,22 +41,23 @@ type IComment = {
     },
   ];
   
-  function countCommentsAndReplies(comment: IComment): number {
-    let count = 1; 
-  
-    if (comment.replies) {
-      for (const reply of comment.replies) {
-        count += countCommentsAndReplies(reply);
-      }
-    }
-  
-    return count;
-  }
-  
-  const totalComments = comments.reduce(
-    (acc, comment) => acc + countCommentsAndReplies(comment),
-    0
+interface IComment {
+  replies?: IComment[];
+}
+
+function countCommentsAndReplies(comment: IComment): number {
+  return (comment.replies || []).reduce(
+    (count, reply) => count + countCommentsAndReplies(reply),
+    1
   );
-  
-  console.log('Total comments and replies:', totalComments);
-  
+}
+
+const totalComments = comments.reduce(
+  (acc, comment) => acc + countCommentsAndReplies(comment),
+  0
+);
+
+console.log('Total comments and replies:', totalComments);
+
+
+// [LOG]: "Total comments and replies:",  7 
