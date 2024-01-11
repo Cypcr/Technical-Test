@@ -76,4 +76,4 @@ type IFruit = {
   console.log('Total Stok Buah Import:', totalStockByType['IMPORT']);
   
   
-  
+
