@@ -42,7 +42,7 @@ type IComment = {
   ];
   
   function countCommentsAndReplies(comment: IComment): number {
-    let count = 1; // Initialize with 1 for the current comment
+    let count = 1; 
   
     if (comment.replies) {
       for (const reply of comment.replies) {
