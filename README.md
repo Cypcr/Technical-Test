@@ -1,2 +1,2 @@
-# QBIT-Junior-Fullstack---Technical-Test
+---Technical-Test
 Hasil Jawaban Test [QBIT] Junior Fullstack - Technical Test
