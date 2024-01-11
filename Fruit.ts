@@ -55,25 +55,37 @@ type IFruit = {
       console.log(fruit.fruitName);
     });
   
-  // Membuat dua array terpisah untuk buah lokal dan import
+  // 1
   const localFruits = fruits.filter(fruit => fruit.fruitType === 'LOCAL');
   const importFruits = fruits.filter(fruit => fruit.fruitType === 'IMPORT');
   
-  // Menampilkan buah lokal
+  // 2.a
   console.log('Buah Lokal:', localFruits.map(fruit => fruit.fruitName));
   
-  // Menampilkan buah import
+  // 2.b
   console.log('Buah Import:', importFruits.map(fruit => fruit.fruitName));
   
-  // Menghitung total stok buah untuk masing-masing tipe
+  // 2.c
   const totalStockByType = fruits.reduce((total, fruit) => {
     total[fruit.fruitType] = (total[fruit.fruitType] || 0) + fruit.stock;
     return total;
   }, {});
   
-  // Menampilkan total stok buah untuk masing-masing tipe
+  // 3
   console.log('Total Stok Buah Lokal:', totalStockByType['LOCAL']);
   console.log('Total Stok Buah Import:', totalStockByType['IMPORT']);
   
-  
+  //Komentar 
+//- Pada penulisan Kode di objek kedua dan ketiga adanya kesalahan pada nama properti. "fruitname" seharusnya dituliskan dengan huruf
+// awal kalimat. Pada objek "apel" diubah menjadi "Apel" dan "KURMA" menjadi "Kurma". Adeanya duplikasi "fruitId: 5", tiap objek harus 
+// memiliki id yang berbeda. 
+
+// Pada Bagian Jenis buah lebih baik didefinisikan sebagai enum jika hanya memiliki dua nilai yaitu "LOCAL" dan "IMPORT" 
+// cth kodingan: 
+
+// enum FruitType {
+//   IMPORT = 'IMPORT',
+//   LOCAL = 'LOCAL',
+// }
+
 
