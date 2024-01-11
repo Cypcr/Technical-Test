@@ -80,6 +80,8 @@ type IFruit = {
 // awal kalimat. Pada objek "apel" diubah menjadi "Apel" dan "KURMA" menjadi "Kurma". Adeanya duplikasi "fruitId: 5", tiap objek harus 
 // memiliki id yang berbeda. 
 
+//Terdapat duplikasi objek nama buah pada kodingan.
+
 // Pada Bagian Jenis buah lebih baik didefinisikan sebagai enum jika hanya memiliki dua nilai yaitu "LOCAL" dan "IMPORT" 
 // cth kodingan: 
 
