@@ -91,3 +91,17 @@ type IFruit = {
 // }
 
 
+// [LOG]: "Total comments and replies:",  7 
+// [LOG]: "Apel" 
+// [LOG]: "Kurma" 
+// [LOG]: "apel" 
+// [LOG]: "Manggis" 
+// [LOG]: "Jeruk Bali" 
+// [LOG]: "KURMA" 
+// [LOG]: "Salak" 
+// [LOG]: "Buah Lokal:",  ["Manggis", "Jeruk Bali", "Salak"] 
+// [LOG]: "Buah Import:",  ["Apel", "Kurma", "apel", "KURMA"] 
+// [LOG]: "Total Stok Buah Lokal:",  260 
+// [LOG]: "Total Stok Buah Import:",  100 
+
+
